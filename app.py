@@ -17,6 +17,16 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=0)  # Add batch dimension
     return image
 
+# Company branding (top-left)
+st.markdown(
+    """
+    <div style="display: flex; align-items: center;">
+        <img src="https://integrano.com/wp-content/uploads/2019/10/integrano-logo.jpg" width="150" style="margin-right: 15px;">
+        <h1 style="margin: 0; font-size: 24px; font-weight: 600">Integrano Technologies Pvt. Ltd.</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 # Streamlit interface
 st.title("🔍 CIFAR-10 Image Classifier")
 st.write("Upload an image and the AI will tell you what it is.")
